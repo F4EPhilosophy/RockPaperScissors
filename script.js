@@ -24,27 +24,17 @@ if (computerChoice == 1) {
 console.log(`Chad picked ${computerChoice}`)
 
 //Checks to see if you drew with the computer.
-if (choice == "Rock" && computerChoice == "Rock" || choice == "Paper" && computerChoice == "Paper" || choice == "Scissors" && computerChoice == "Scissors" ) {
+if (choice == computerChoice) {
     console.log("Draw!")
+} else if (
+    (choice == "Rock" && computerChoice == "Scissors") ||
+    (choice == "Paper" && computerChoice == "Rock") ||
+    (choice == "Scissors" && computerChoice == "Paper")) 
+{
+    console.log("You won!")
+} else {
+    console.log("You Lost!")
 }
 
-//lines 32-48 check to see if you won or lost.
-if (choice == "Rock" && computerChoice == "Paper") {
-    console.log("You lose!")
-} else if (choice == "Rock" && computerChoice == "Scissors") {
-    console.log("You win!")
-}
-
-if (choice == "Paper" && computerChoice == "Scissors") {
-    console.log("You lose!")
-} else if (choice == "Paper" && computerChoice == "Rock") {
-    console.log("You win!")
-}
-
-if (choice == "Scissors" && computerChoice == "Rock") {
-    console.log("You lose!")
-} else if (choice == "Scissors" && computerChoice == "Paper") {
-    console.log("You win!")
-}
 
 
